@@ -43,7 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
       weightKg: double.parse(_weightCtrl.text),
       age: int.parse(_ageCtrl.text),
     );
-    FocusScope.of(context).unfocus();
+    // Quita el foco del campo (y lo olvida) para que el teclado no se vuelva
+    // a abrir solo al regresar de la pantalla de resultados.
+    FocusManager.instance.primaryFocus?.unfocus();
     Navigator.push(context, fadeSlideRoute(ResultScreen(data: data)));
   }
 

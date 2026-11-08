@@ -1,17 +1,14 @@
-# body_metrics
+# BodyMetrics
 
-A new Flutter project.
+Calculadora de IMC en Flutter (Android) enfocada en UI/UX. Actividad 1 de la Unidad 3 de Desarrollo de Aplicaciones Móviles.
 
-## Getting Started
+- Formulario en Cards con validación en tiempo real, Slider de estatura, género con ToggleButtons y botones − / + para edad y peso.
+- Resultado con color por categoría, ilustración SVG propia, recomendaciones y un video de rutina de bajo impacto.
+- Transición fade + slide entre pantallas y carga de 1.5 s.
+- Retos extra: modo oscuro (sigue al sistema) e idioma español/inglés al instante.
 
-This project is a starting point for a Flutter application.
+Estructura: `lib/models`, `lib/screens`, `lib/widgets`, `lib/logic`, `lib/theme`, `lib/l10n`. Capturas en `docs/evidencias/`.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter run
+```

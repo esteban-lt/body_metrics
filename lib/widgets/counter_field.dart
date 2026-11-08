@@ -65,6 +65,8 @@ class CounterField extends StatelessWidget {
               ),
               validator: validator,
               onChanged: (_) => onChanged(),
+              // Cierra el teclado al tocar fuera del campo.
+              onTapOutside: (_) => FocusManager.instance.primaryFocus?.unfocus(),
             ),
             const SizedBox(height: 10),
             Row(
