@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../l10n/app_strings.dart';
 import '../models/person_data.dart';
 import '../widgets/counter_field.dart';
+import '../widgets/fade_slide_route.dart';
 import '../widgets/gender_selector.dart';
+import 'result_screen.dart';
 
 /// Pantalla principal: formulario con género, estatura, edad y peso.
 class HomeScreen extends StatefulWidget {
@@ -40,9 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
       weightKg: double.parse(_weightCtrl.text),
       age: int.parse(_ageCtrl.text),
     );
-    // Fase 2: aquí se navega a la pantalla de resultados.
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text('OK: ${data.heightCm.round()} cm, ${data.weightKg} kg')));
+    FocusScope.of(context).unfocus();
+    Navigator.push(context, fadeSlideRoute(ResultScreen(data: data)));
   }
 
   @override
