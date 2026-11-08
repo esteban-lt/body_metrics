@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../l10n/app_strings.dart';
+import '../widgets/language_button.dart';
 
 /// Un solo video de rutina para todas las categorías.
 /// (Validado con el endpoint oEmbed de YouTube: responde 200, se puede incrustar.)
@@ -32,7 +33,10 @@ class _VideoScreenState extends State<VideoScreen> {
   Widget build(BuildContext context) {
     final s = L10n.of(context);
     return Scaffold(
-      appBar: AppBar(title: Text(s.t('video_title'))),
+      appBar: AppBar(
+        title: Text(s.t('video_title')),
+        actions: const [LanguageButton()],
+      ),
       body: ListView(
         children: [
           YoutubePlayer(controller: _controller),

@@ -6,6 +6,7 @@ import '../models/person_data.dart';
 import '../theme/app_theme.dart';
 import '../widgets/bmi_illustration.dart';
 import '../widgets/fade_slide_route.dart';
+import '../widgets/language_button.dart';
 import 'video_screen.dart';
 
 /// Pantalla de resultados. Primero muestra ~1.5 s una animación de carga
@@ -34,7 +35,10 @@ class _ResultScreenState extends State<ResultScreen> {
   Widget build(BuildContext context) {
     final s = L10n.of(context);
     return Scaffold(
-      appBar: AppBar(title: Text(s.t('result_title'))),
+      appBar: AppBar(
+        title: Text(s.t('result_title')),
+        actions: const [LanguageButton()],
+      ),
       body: SafeArea(
         child: AnimatedSwitcher(
           duration: const Duration(milliseconds: 500),

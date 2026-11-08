@@ -5,6 +5,7 @@ import '../models/person_data.dart';
 import '../widgets/counter_field.dart';
 import '../widgets/fade_slide_route.dart';
 import '../widgets/gender_selector.dart';
+import '../widgets/language_button.dart';
 import 'result_screen.dart';
 
 /// Pantalla principal: formulario con género, estatura, edad y peso.
@@ -87,6 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         leading: const Icon(Icons.monitor_weight_outlined),
         title: Text(s.t('app_title')),
+        actions: const [LanguageButton()],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
